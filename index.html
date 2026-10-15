@@ -9,7 +9,7 @@
 <link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/lounge.css?v=4">
-<script defer src="assets/data.js?v=5"></script>
+<script defer src="assets/data.js?v=6"></script>
 <script defer src="assets/logic.js?v=4"></script>
 <script defer src="assets/lounge.js?v=4"></script>
 </head>
@@ -51,7 +51,7 @@
 </section>
 <section id="view-mix" class="view" hidden>
 <div class="page-heading"><h1>Cocktail lab</h1><p>Recipes based on your bottles and kitchen ingredients.</p></div>
-<div class="lab-intro"><div><span class="availability-dot"></span><strong id="lab-ready-count">64</strong><span>drinks you can make right now</span></div><button class="button primary" id="surprise-me"><svg class="icon"><use href="#i-shuffle"/></svg>Surprise me</button></div>
+<div class="lab-intro"><div><span class="availability-dot"></span><strong id="lab-ready-count">65</strong><span>drinks you can make right now</span></div><button class="button primary" id="surprise-me"><svg class="icon"><use href="#i-shuffle"/></svg>Surprise me</button></div>
 <details class="pantry-panel"><summary><span><svg class="icon"><use href="#i-plus"/></svg>What’s in your kitchen?</span><span id="pantry-count"></span></summary><p>Tap to update your ingredients. Your cocktail options change with them.</p><div class="pantry-items" id="pantry-items"></div></details>
 <div class="collection-toolbar"><label class="search-field"><svg class="icon"><use href="#i-search"/></svg><input id="recipe-search" type="search" placeholder="Find a cocktail or ingredient…" aria-label="Search cocktails"></label><div class="segmented" id="availability-filters" role="group" aria-label="Cocktail availability"><button class="active" data-availability="ready" aria-pressed="true">Ready to mix</button><button data-availability="almost" aria-pressed="false">One away</button><button data-availability="all" aria-pressed="false">All drinks</button></div></div>
 <div class="recipe-controls"><div class="status-filters" id="recipe-styles" role="group" aria-label="Cocktail style"></div><span class="result-count" id="recipe-count" aria-live="polite"></span></div>

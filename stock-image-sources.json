@@ -664,6 +664,14 @@
       "source_page": "https://msbetters.us/products/ms-betters-bitters-miraculous-foamer",
       "image_url": "https://msbetters.us/cdn/shop/products/Foamer_c191a1f8-037c-4a12-ad31-8763db1c8946.jpg?v=1661703242",
       "sha256": "c7637d7478b5641728f53b48343c20abf74406ff6b522b05f22372695234caf9"
+    },
+    "benedictine-dom-1l": {
+      "name": "Bénédictine D.O.M.",
+      "asset": "photos/stock/benedictine-dom-1l.webp",
+      "source_page": "https://www.ishopchangi.com/en/product/benedictine-d-o-m-1000ml-40--mp00089242",
+      "image_url": "https://changiairport.scene7.com/is/image/changiairport/mp00089243-1-benedictine-dom-1766543419776?wid=600&hei=800&fmt=png-alpha",
+      "sha256": "0ff4c55af67ae049897c05e0eb30ab095eac79d73c28a004d6713050eb0e2b38",
+      "variant": "D.O.M. Original 1000ml, 40%; matched against purchase box and receipt."
     }
   }
 }
