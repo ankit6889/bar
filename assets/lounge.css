@@ -18,3 +18,6 @@
 @media(max-width:370px){.shell{width:calc(100% - 28px)}.hero h1{font-size:39px}.hero-actions{gap:10px}.hero-actions>.text-link{font-size:10px}.hero-actions>.button{padding-inline:12px;font-size:11px}.bottle-stage{height:165px}.bottle-stage img{height:148px}.drink-stage{height:300px}.annotation-two{right:5px;font-size:8px}.sort-label select{max-width:155px}.recipe-grid{grid-template-columns:1fr}.recipe-art{height:160px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.card-open:hover .bottle-stage img{transform:none}}
 body.motion-off *,body.motion-off *:before,body.motion-off *:after{animation:none!important;transition:none!important}body.motion-off .card-open:hover .bottle-stage img{transform:none}
+
+/* Collection-first layout for personal use. */
+.collection-section{padding-top:28px;padding-bottom:32px}.collection-title{font:500 30px/1.3 var(--display);letter-spacing:-.04em}.page-heading{padding-block:28px 24px}.page-heading h1{font-size:32px}.section-heading{margin-bottom:22px}@media(max-width:620px){.collection-section{padding-top:23px}.collection-title{font-size:25px}.page-heading h1{font-size:28px}}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "description": "Producer and retailer product photographs for every bottle in My Bar. Original personal photos are preserved in photos/. Embedded copies in bar-app.html keep the app self-contained and usable offline.",
   "notes": [
     "Photos represent the named brand and expression. Bottle sizes, regional label revisions, and wine vintages may vary from the owner’s bottle.",
@@ -36,10 +36,11 @@
     },
     "gordons-london-dry": {
       "name": "Gordon's London Dry Gin",
-      "asset": "photos/stock/gordons-london-dry.webp",
-      "source_page": "https://www.thebar.com/en/brands/gordons",
-      "image_url": "https://images.ctfassets.net/vvbow7h7clgh/5OPD9dWWuCjOJ5bBXf9ur7/d494c03b68a3e6186e2f54c8d65d1730/e7f84e75c378ea7ad6b86f630efe84e286bfa330.png?fm=avif&w=1900&q=60",
-      "sha256": "a31d97132be7b866b6f58070613f6de53606ef5cc9d1a7209a6eee3844d6f1c2"
+      "asset": "photos/stock/gordons-london-dry-export.webp",
+      "source_page": "https://www.delicando.com/en/products/28657-gordons-london-dry-gin-375-vol-1-litre",
+      "image_url": "https://www.delicando.com/cdn/shop/files/d3a28837bbda024146e17ba34c779f304384d35e3fd2c78229657eb4f2ace923_c840a3c8-feb0-4925-b16b-7fada58db1a6.webp?v=1792030563",
+      "sha256": "1b2e4087c45074b9dc5b1af7d5afa1dbd1c37d413ec5fe4ee614a755c1e7e948",
+      "variant": "Clear export bottle, purple-and-yellow cap and label; matched against owner reference."
     },
     "scapegrace-classic": {
       "name": "Scapegrace Premium Small Batch Dry Gin (Classic)",
@@ -141,10 +142,11 @@
     },
     "kah-reposado": {
       "name": "KAH Reposado",
-      "asset": "photos/stock/kah-reposado.webp",
-      "source_page": "https://tottenhamwine.com/products/kah-tequila-reposado-in-hand-painted-yellow-ceramic-day-of-the-dead-skull-bottle",
-      "image_url": "https://tottenhamwine.com/cdn/shop/products/Photo16-11-2021_162750_1200x1200.png?v=1637080504",
-      "sha256": "8cb25945c9a113652ef7463963b829007d038bdcc173298c8aa0892cbd3c46c6"
+      "asset": "photos/stock/kah-reposado-rectangular.webp",
+      "source_page": "https://www.paulsliquor.com.au/products/kah-tequila-reposado-700ml",
+      "image_url": "https://cdn.shopify.com/s/files/1/0458/1995/3320/files/222443-1.png?v=1751805585",
+      "sha256": "bf0574f9cef52884692d58b84c8ad9b21368b55d97046bc290d2eaa5e94bd576",
+      "variant": "Rectangular ceramic Reposado bottle, 700ml/40%; matched against owner reference."
     },
     "wanara-petak-arak-nira": {
       "name": "Wanara Petak (Arak Nira)",
