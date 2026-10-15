@@ -1,6 +1,34 @@
 const BarLogic = (() => {
  const fillPercent={full:100,'3/4':75,'2/3':66,half:50,'1/3':33,'1/4':25,low:10,unknown:50};
+ const categoryOrder=['Gin','Whisky','Rum','Tequila/Agave','Vodka','Brandy','Arak','Liqueur','Amaro/Bitter','Vermouth/Fortified','Wine','Bitters'];
+ const compareCategories=(a,b)=>(categoryOrder.includes(a)?categoryOrder.indexOf(a):categoryOrder.length)-(categoryOrder.includes(b)?categoryOrder.indexOf(b):categoryOrder.length)||a.localeCompare(b);
+ const compareNames=(a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base',numeric:true})||a.id.localeCompare(b.id);
  const normalize=s=>String(s??'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[’']/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+ // Known packaging variants of the same label. Flavours and editions keep
+ // their own names; each physical bottle remains an independent record.
+ const labelNames={
+  'the-botanist-islay-dry-gin':'The Botanist Islay Dry Gin',
+  'botanist-1l-gift-tin':'The Botanist Islay Dry Gin',
+  'kahlua-750-sealed':'Kahlua The Original',
+ };
+ const labelName=b=>labelNames[b.id]||b.name;
+ const labelKey=b=>JSON.stringify([normalize(b.cat),normalize(b.brand),normalize(labelName(b))]);
+ function groupBottles(matches,inventory=matches){
+  const stock=new Map(),groups=new Map();
+  for(const bottle of inventory){
+   const key=labelKey(bottle);
+   if(!stock.has(key))stock.set(key,[]);
+   stock.get(key).push(bottle);
+  }
+  for(const bottle of matches){
+   const key=labelKey(bottle);
+   if(!groups.has(key))groups.set(key,{key,name:labelName(bottle),bottles:stock.get(key)||[bottle],matches:[]});
+   groups.get(key).matches.push(bottle);
+  }
+  return [...groups.values()].map(group=>({...group,
+   bottle:group.matches.find(b=>b.opened&&b.loc==='main bar')||group.matches.find(b=>b.opened)||group.matches[0],
+  }));
+ }
  function filterBottles(bottles,options={}){
   const {query='',category='All',status='All',sort='collection',favorites=[]}=options;
   const words=normalize(query).split(/\s+/).filter(Boolean),saved=new Set(favorites);
@@ -15,7 +43,8 @@ const BarLogic = (() => {
    const hay=normalize([b.name,b.brand,b.sub,...(b.flav||[]),...(b.tags||[])].join(' '));
    return words.every(w=>hay.includes(w));
   });
-  if(sort==='name')result.sort((a,b)=>a.name.localeCompare(b.name));
+  if(sort==='collection')result.sort((a,b)=>compareCategories(a.cat,b.cat)||compareNames(a,b));
+  if(sort==='name')result.sort(compareNames);
   if(sort==='level')result.sort((a,b)=>(fillPercent[a.fill]??50)-(fillPercent[b.fill]??50));
   if(sort==='price')result.sort((a,b)=>(b.price||0)-(a.price||0));
   return result;
@@ -76,6 +105,6 @@ const BarLogic = (() => {
   const state=Object.fromEntries(pantry.map(item=>[item.id,typeof p.pantry?.[item.id]==='boolean'?p.pantry[item.id]:item.def]));
   return {favorites,pantry:state};
  }
- return {fillPercent,normalize,filterBottles,ingredientStatus,evaluateRecipe,filterRecipes,scaleAmount,scaleMethod,sanitizePreferences};
+ return {fillPercent,compareCategories,normalize,groupBottles,filterBottles,ingredientStatus,evaluateRecipe,filterRecipes,scaleAmount,scaleMethod,sanitizePreferences};
 })();
 if(typeof module!=='undefined')module.exports=BarLogic;
