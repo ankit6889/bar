@@ -311,10 +311,11 @@
     },
     "marchesi-di-barolo-ruvei": {
       "name": "Marchesi di Barolo Ruvei",
-      "asset": "photos/stock/marchesi-di-barolo-ruvei.webp",
-      "source_page": "https://marchesibarolo.com/en/wines/ruvei/",
-      "image_url": "https://marchesibarolo.com/_nuxt/image/113e6c.png",
-      "sha256": "6b232e76ea747b46780b57245c66ab9837733cac5ce1841a1ad489a0cfa41999"
+      "asset": "photos/stock/marchesi-di-barolo-ruvei-front.webp",
+      "source_page": "https://www.wine.com/product/marchesi-di-barolo-barbera-dalba-ruvei-2020/1202365",
+      "image_url": "https://assets.wine.com/winecom/image/upload/dun4yqzfeppowua9qhss.jpg",
+      "sha256": "e2f43223293e36bf3f6d1906fa66546831bec9736b96e9e278ae5bfcb9a04656",
+      "variant": "Upright front product photo; red capsule and cream Ruvei Barbera d’Alba labels matched against owner reference."
     },
     "grover-zampa-la-reserve-2021": {
       "name": "Grover Zampa La Reserve 2021 (in collaboration with Michel R",
