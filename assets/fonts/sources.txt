@@ -1,0 +1,2 @@
+https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..800&family=Unbounded:wght@400..700&display=swap
+Fonts downloaded from the official Google Fonts CDN. Families licensed under the SIL Open Font License.
